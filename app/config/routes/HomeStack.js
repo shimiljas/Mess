@@ -52,9 +52,9 @@ const TabNavigatorConfig = {
 
 const HomeBotttomTabStack = createBottomTabNavigator(
   {
-    PlanScreen: {
-      title: 'PlanScreen',
-      headerTitle: 'PlanScreen',
+    Plan: {
+      title: 'Plan',
+      headerTitle: 'Plan',
       screen: PlanScreen,
 
       navigationOptions: ({ screenProps, navigation }) => ({
