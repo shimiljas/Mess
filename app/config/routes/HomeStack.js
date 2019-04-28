@@ -61,7 +61,7 @@ const HomeBotttomTabStack = createBottomTabNavigator(
         tabBarIcon: ({ focused }) => {
           return (
             <Image
-              source={require('../../assets/icons/address-icon.png')}
+              source={require('../../assets/icons/home.png')}
               style={{ width: 25, height: 25 }}
             />
           );
@@ -76,8 +76,8 @@ const HomeBotttomTabStack = createBottomTabNavigator(
         tabBarIcon: ({ focused }) => {
           return (
             <Image
-              source={require('../../assets/icons/address-icon.png')}
-              style={{ width: 25, height: 25 }}
+              source={require('../../assets/icons/message.png')}
+              style={{ width: 30, height: 25 }}
             />
           );
         }
@@ -91,8 +91,8 @@ const HomeBotttomTabStack = createBottomTabNavigator(
         tabBarIcon: ({ focused }) => {
           return (
             <Image
-              source={require('../../assets/icons/address-icon.png')}
-              style={{ width: 25, height: 25 }}
+              source={require('../../assets/icons/notification.png')}
+              style={{ width: 22, height: 25 }}
             />
           );
         }
@@ -108,8 +108,8 @@ const HomeBotttomTabStack = createBottomTabNavigator(
         tabBarIcon: ({ focused }) => {
           return (
             <Image
-              source={require('../../assets/icons/address-icon.png')}
-              style={{ width: 25, height: 25 }}
+              source={require('../../assets/icons/account.png')}
+              style={{ width: 19, height: 25 }}
             />
           );
         }
@@ -121,8 +121,7 @@ const HomeBotttomTabStack = createBottomTabNavigator(
     navigationOptions: ({ navigation }) => {
       // const { routeName } = navigation.state.routes[navigation.state.index];
       return {
-        headerLeft: <Text>sdfsf</Text>,
-        headerRight: <Text>sdfsdf</Text>
+        header: null
       };
     }
   }
