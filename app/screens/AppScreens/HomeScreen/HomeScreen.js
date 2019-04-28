@@ -14,7 +14,7 @@ import {
 } from '../../../utilities/Responsive';
 import PostCard from '../../../components/postCard';
 
-export default class PlanScreen extends Component {
+export default class HomeScreen extends Component {
   render() {
     return (
       <View style={{ flex: 1, backgroundColor: 'rgb(245,245,245)' }}>

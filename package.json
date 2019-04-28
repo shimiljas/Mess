@@ -50,5 +50,13 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "rnpm": {
+    "android": {
+      "mainFilePath": "src/main/java/com/mess/MainApplication.java"
+    },
+    "assets": [
+      "./app/assets/fonts/"
+    ]
   }
 }

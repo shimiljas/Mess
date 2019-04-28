@@ -17,7 +17,7 @@ import {
   moderateScale
 } from '../../../utilities/Responsive';
 
-export default class CalendarScreen extends React.Component {
+export default class AccountScreen extends React.Component {
   render() {
     return (
       <View style={styles.Container}>

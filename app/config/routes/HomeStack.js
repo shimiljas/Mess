@@ -9,11 +9,12 @@ import {
 } from 'react-navigation';
 import { connect } from 'react-redux';
 
-import CalendarScreen from '../../screens/AppScreens/CalendarScreen/CalendarScreen';
-import FoodListScreen from '../../screens/AppScreens/FoodListScreen/FoodListScreen';
-import PlanScreen from '../../screens/AppScreens/PlanScreen/PlanScreen';
-import Restaurant from '../../screens/AppScreens/Restaurant/Restaurant';
+import AccountScreen from '../../screens/AppScreens/AccountScreen/AccountScreen';
+import MessageScreen from '../../screens/AppScreens/MessageScreen/MessageScreen';
+import HomeScreen from '../../screens/AppScreens/HomeScreen/HomeScreen';
+import Notification from '../../screens/AppScreens/Notification/Notification';
 import DrawerScreen from '../../screens/DrawerSceens/DrawerScreen';
+import AddPage from '../../screens/AppScreens/AddPage/AddPage';
 
 function getTabBar(text) {
   return {
@@ -52,10 +53,10 @@ const TabNavigatorConfig = {
 
 const HomeBotttomTabStack = createBottomTabNavigator(
   {
-    Plan: {
-      title: 'Plan',
-      headerTitle: 'Plan',
-      screen: PlanScreen,
+    Home: {
+      title: 'Home',
+      headerTitle: 'Home',
+      screen: HomeScreen,
 
       navigationOptions: ({ screenProps, navigation }) => ({
         tabBarIcon: ({ focused }) => {
@@ -68,10 +69,10 @@ const HomeBotttomTabStack = createBottomTabNavigator(
         }
       })
     },
-    Food: {
-      title: 'Food',
-      headerTitle: 'Food',
-      screen: FoodListScreen,
+    Message: {
+      title: 'Message',
+      headerTitle: 'Message',
+      screen: MessageScreen,
       navigationOptions: ({ screenProps, navigation }) => ({
         tabBarIcon: ({ focused }) => {
           return (
@@ -83,10 +84,25 @@ const HomeBotttomTabStack = createBottomTabNavigator(
         }
       })
     },
-    Restaurant: {
-      title: 'Restaurant',
-      headerTitle: 'Restaurant',
-      screen: Restaurant,
+    AddPage: {
+      title: 'AddPage',
+      headerTitle: 'AddPage',
+      screen: AddPage,
+      navigationOptions: ({ screenProps, navigation }) => ({
+        tabBarIcon: ({ focused }) => {
+          return (
+            <Image
+              source={require('../../assets/icons/menu.png')}
+              style={{ width: 50, height: 50, marginTop: 5 }}
+            />
+          );
+        }
+      })
+    },
+    Notification: {
+      title: 'Notification',
+      headerTitle: 'Notification',
+      screen: Notification,
       navigationOptions: ({ screenProps, navigation }) => ({
         tabBarIcon: ({ focused }) => {
           return (
@@ -99,10 +115,10 @@ const HomeBotttomTabStack = createBottomTabNavigator(
       })
     },
 
-    Calendar: {
-      title: 'Calendar',
-      headerTitle: 'Calendar',
-      screen: CalendarScreen,
+    AccountScreen: {
+      title: 'AccountScreen',
+      headerTitle: 'AccountScreen',
+      screen: AccountScreen,
 
       navigationOptions: ({ screenProps, navigation }) => ({
         tabBarIcon: ({ focused }) => {
@@ -117,6 +133,9 @@ const HomeBotttomTabStack = createBottomTabNavigator(
     }
   },
   {
+    tabBarOptions: {
+      showLabel: false
+    },
     // eslint-disable-next-line no-unused-vars
     navigationOptions: ({ navigation }) => {
       // const { routeName } = navigation.state.routes[navigation.state.index];
