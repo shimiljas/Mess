@@ -5,7 +5,8 @@ import {
   Dimensions,
   StyleSheet,
   ScrollView,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native';
 import {
   scale,
@@ -29,7 +30,10 @@ export default class HomeScreen extends Component {
             </View>
           </View>
           <View style={styles.categories}>
-            <View style={styles.categoryBox}>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('JobDetailScreen')}
+              style={styles.categoryBox}
+            >
               <View style={styles.iconBox}>
                 <Image
                   style={{ width: 40, height: 60 }}
@@ -39,7 +43,7 @@ export default class HomeScreen extends Component {
               <View style={styles.catTextBox}>
                 <Text style={styles.catText}> Jobs</Text>
               </View>
-            </View>
+            </TouchableOpacity>
             <View style={styles.categoryBox}>
               <View style={styles.iconBox}>
                 <Image
@@ -51,7 +55,12 @@ export default class HomeScreen extends Component {
                 <Text style={styles.catText}> Rooms</Text>
               </View>
             </View>
-            <View style={styles.categoryBox}>
+            <TouchableOpacity
+              onPress={() =>
+                this.props.navigation.navigate('RestaurantDetailScreen')
+              }
+              style={styles.categoryBox}
+            >
               <View style={styles.iconBox}>
                 <Image
                   style={{ width: 50, height: 50 }}
@@ -63,10 +72,13 @@ export default class HomeScreen extends Component {
               <View style={styles.catTextBox}>
                 <Text style={styles.catText}> Food</Text>
               </View>
-            </View>
+            </TouchableOpacity>
           </View>
           <View style={styles.categories}>
-            <View style={styles.categoryBox}>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('EventScreen')}
+              style={styles.categoryBox}
+            >
               <View style={styles.iconBox}>
                 <Image
                   style={{ width: 47, height: 50 }}
@@ -76,7 +88,7 @@ export default class HomeScreen extends Component {
               <View style={styles.catTextBox}>
                 <Text style={styles.catText}> Events</Text>
               </View>
-            </View>
+            </TouchableOpacity>
             <View style={styles.categoryBox}>
               <View style={styles.iconBox}>
                 <Image
@@ -88,7 +100,10 @@ export default class HomeScreen extends Component {
                 <Text style={styles.catText}> Group</Text>
               </View>
             </View>
-            <View style={styles.categoryBox}>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('HelpScreen')}
+              style={styles.categoryBox}
+            >
               <View style={styles.iconBox}>
                 <Image
                   style={{ width: 70, height: 35 }}
@@ -98,7 +113,7 @@ export default class HomeScreen extends Component {
               <View style={styles.catTextBox}>
                 <Text style={styles.catText}> Help</Text>
               </View>
-            </View>
+            </TouchableOpacity>
           </View>
           <View style={styles.catHead}>
             <View style={styles.i} />

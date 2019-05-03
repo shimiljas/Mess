@@ -16,6 +16,11 @@ import Notification from '../../screens/AppScreens/Notification/Notification';
 import DrawerScreen from '../../screens/DrawerSceens/DrawerScreen';
 import AddPage from '../../screens/AppScreens/AddPage/AddPage';
 
+import RestaurantDetailScreen from '../../screens/AppScreens/HomeScreen/FoodScreen/RestaurantDetailScreen';
+import JobDetailScreen from '../../screens/AppScreens/HomeScreen/JobsScreen/JobDetailScreen';
+import EventScreen from '../../screens/AppScreens/HomeScreen/EventScreen/EventScreen';
+import HelpScreen from '../../screens/AppScreens/HomeScreen/HelpScreen/HelpScreen';
+
 function getTabBar(text) {
   return {
     tabBarLabel: () => (
@@ -148,8 +153,33 @@ const HomeBotttomTabStack = createBottomTabNavigator(
 
 const HomeStackNavigation = createStackNavigator(
   {
-    HomeStack: HomeBotttomTabStack
+    HomeStack: HomeBotttomTabStack,
+    JobDetailScreen: {
+      screen: JobDetailScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
+    RestaurantDetailScreen: {
+      screen: RestaurantDetailScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
+    EventScreen: {
+      screen: EventScreen,
+      navigationOptions: {
+        header: null
+      }
+    },
+    HelpScreen: {
+      screen: HelpScreen,
+      navigationOptions: {
+        header: null
+      }
+    }
   },
+
   {
     // initialRouteName: 'ProfileScreen',
     swipeEnabled: false,
